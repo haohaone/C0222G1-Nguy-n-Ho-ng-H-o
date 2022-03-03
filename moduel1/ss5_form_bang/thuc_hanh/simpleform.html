@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Form cơ bản</title>
+    <style>
+        form {font-family: "Calibri Light"}
+    </style>
 </head>
 <body>
-$END$
+<form class="form" action="simpleform.html" name="form cơ bản" method="get">
+    <h1>ĐƠN ĐẶT HÀNG</h1>
+    <p><strong>Bạn muốn mua gì?</strong></p>
+    <select>
+        <option value="cơm">cơm tấm</option>
+        <option value="">cơm gà</option>
+        <option value="">cơm sườn</option>
+    </select>
+    <p><strong>Bạn muốn mua bao nhiêu cái</strong></p>
+    <input name="số lượng" type="radio" value="number">1<br>
+    <input name="số lượng" type="radio" value="number">2<br>
+    <input name="số lượng" type="radio" value="number">3<br>
+    <p><strong>Tên của bạn<span style="color: blue">*</span></strong></p>
+    <input name="Họ" type="text" value="Họ">
+    <input name="Tên" type="text" value="Tên"><br>
+    <p><strong>Địa chỉ<span style="color: blue">*</span> </strong></p>
+    <input type="text" name="địa chỉ"><br><br>
+    <input type="submit" name="đặt hàng" value="đặt hàng">
+</form>
 </body>
 </html>

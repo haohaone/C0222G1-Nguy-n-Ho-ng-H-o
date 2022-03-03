@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form cơ bản</title>
+    <style>
+        form {margin-left: 35%;background-color: white;width: 500px}
+        th {text-align: center;background-color: orange; color: white}
+    </style>
+</head>
+<body>
+    <form class="form" action="https://ken.codegym.vn/boards/13862" method="get">
+        <fieldset>
+        <table style="width: 500px">
+            <tr>
+            <th colspan="4" class="th">Sở thích của bạn</th>
+            </tr>
+            <tr>
+                <td style="text-align: right"><label for="Họ và tên">Họ và tên: </label></td>
+                <td colspan="2"style="text-align: center"><input name="name" type="text" id="Họ và tên"></td>
+            </tr>
+            <tr>
+                <td class="cot1" style="text-align: right"><label for="Email">Email: </label></td>
+                <td colspan="2" style="text-align: center"><input name="email" type="text" id="Email" ></td>
+            </tr>
+            <tr>
+                <td style="text-align: right">Sở thích </td>
+                <td><input name="sở thích" type="checkbox" id="Thể thao"><label for="Thể thao">Thể thao</label> </td>
+                <td><input name="sở thích" type="checkbox" id="Âm nhạc"><label for="Âm nhạc">Âm nhạc</label> </td>
+                <td><input name="sở thích" type="checkbox" id="Đọc sách"><label for="Đọc sách">Đọc sách</label> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input name="sở thích" type="checkbox" id="Lướt web"><label for="Lướt web">Lướt web</label> </td>
+                <td><input name="sở thích" type="checkbox" id="Chơi game"><label for="Chơi game">Chơi game</label> </td>
+                <td><input name="sở thích" type="checkbox" id="Điện ảnh"><label for="Điện ảnh">Điện ảnh</label> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input name="sở thích" type="checkbox" id="Du lịch"><label for="Du lịch">Du lịch</label></td>
+            </tr>
+            <tr>
+                <td style="text-align: right" colspan="2"><input type="submit" name="submit" value="Gửi thông tin"></td>
+                <td colspan="2"><input type="reset" name="reset" value="Nhập lại"></td>
+            </tr>
+        </table>
+        </fieldset>
+    </form>
+</body>
+</html>
