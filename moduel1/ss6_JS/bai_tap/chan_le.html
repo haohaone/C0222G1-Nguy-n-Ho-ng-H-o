@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Số chẵn hay lẻ</title>
 </head>
 <body>
-$END$
+    <p>Đây là số: <span id="ketqua"></span></p>
 </body>
+    <script>
+        let a = parseInt(prompt('Nhập số'));
+         if (a%2==0) {
+             document.getElementById('ketqua').innerHTML ="đây là số chẳn";
+         } else {
+             document.getElementById('ketqua').innerHTML = "đây là số lẻ";
+         }
+    </script>
 </html>

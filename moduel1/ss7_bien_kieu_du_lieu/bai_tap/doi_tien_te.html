@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Doi tien te</title>
+    <style>
+        table {
+            width: 800px;
+            margin-left: 20%;
+            text-align: center;
+            color: white;
+        }
+    </style>
 </head>
-<body>
-$END$
+<body style="background-color: black">
+<form action="doi_tien_te.html" name="doitien">
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="soluong" id="soluong">
+            </td>
+            <td>
+                <select id="select1" onchange="luachon1">
+                    <option value="vnd" selected>VND</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="select2">
+                    <option value="vnd1">VND</option>
+                    <option value="usd1" selected>USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="ketqua()">Convert</button>
+            </td>
+            <td>
+                <p id="result">Result</p>
+            </td>
+        </tr>
+    </table>
+</form>
 </body>
+<script>
+    function ketqua() {
+        let amount = document.getElementById('soluong').value;
+        let b = amount / 23000
+        document.getElementById('result').innerHTML = b;
+    }
+</script>
 </html>
