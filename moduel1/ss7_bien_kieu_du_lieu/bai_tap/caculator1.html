@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <style>
+        table {
+            text-align: center;
+            margin-left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><h3>Caculator</h3></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="text" id="so1"></td>
+            <td colspan="2"><input type="text" id="so2"></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="cong()">Addition(+)</button>
+            </td>
+            <td>
+                <button onclick="tru()">Subtraction(-)</button>
+            </td>
+            <td>
+                <button onclick="nhan()">Multiplication(x)></button>
+            </td>
+            <td>
+                <button onclick="chia()">Division(/)</button>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left"><p id="ketqua">Result: </p> </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function cong() {
+        let a = parseInt(document.getElementById('so1').value);
+        let b = parseInt(document.getElementById('so2').value);
+        let kq1= a+b
+        document.getElementById('ketqua').innerHTML ='Result: ' + kq1;
+    }
+    function tru() {
+        let a = parseInt(document.getElementById('so1').value);
+        let b = parseInt(document.getElementById('so2').value);
+        let  kq2 = a - b
+        document.getElementById('ketqua').innerHTML ='Result: ' + kq2;
+    }
+    function nhan() {
+        let a = parseInt(document.getElementById('so1').value);
+        let b = parseInt(document.getElementById('so2').value);
+        let  kq3 = a*b
+        document.getElementById('ketqua').innerHTML ='Result: ' + kq3;
+    }
+    function chia() {
+        let a = parseInt(document.getElementById('so1').value);
+        let b = parseInt(document.getElementById('so2').value);
+        let  kq4 = a/b
+        document.getElementById('ketqua').innerHTML ='Result: ' + kq4;
+    }
+</script>
+</html>
