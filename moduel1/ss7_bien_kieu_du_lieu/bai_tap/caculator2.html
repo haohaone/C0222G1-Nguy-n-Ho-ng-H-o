@@ -4,51 +4,63 @@
     <meta charset="UTF-8">
     <title>Caculator</title>
     <style>
-        table {width: 400px;height: 100px;text-align: center;table-layout: fixed;margin-left: 35%}
+        table {width: 400px;height: 100px;text-align: center;table-layout: fixed;margin-left: 35%;margin-top: 15%}
         button {width: 100%;padding: 5px;font-size: 15px;height: 100%}
         b {width: 100%;height: 20px}
         input {width: 98%;height: 30px;text-align: right}
     </style>
 </head>
-<body>
-    <table>
+<body style="background-color: #dddd">
+<form action="#" name="caculator">
+    <table cellpadding="0", cellspacing="0">
         <tr>
-            <td colspan="4">
-                <input type="text" id="result">
-            </td>
+            <th colspan="4">
+                <input type="text" id="result" value="" placeholder="0">
+            </th>
         </tr>
         <tr>
-            <td><button onclick="ngoacdong()">(</button></td>
-            <td><button onclick="ngoacmo()">)</button></td>
-            <td><button onclick="phantram()">%</button></td>
+            <td><button onclick="cong('(')">̣̣̣̣̣̣̣̣̣(</button></td>
+            <td><button onclick="cong(')')">)</button></td>
+            <td><button onclick="cong('%')">%</button></td>
             <td><button onclick="ac()">ac</button></td>
         </tr>
         <tr>
-            <td><button onclick="num7()">7</button></td>
-            <td><button onclick="num8()">8</button></td>
-            <td><button onclick="num9()">9</button></td>
-            <td><button onclick="chia()">/</button></td>
+            <td><button onclick="cong('7')">7</button></td>
+            <td><button onclick="cong('8')">8</button></td>
+            <td><button onclick="cong('9')">9</button></td>
+            <td><button onclick="cong('/')">/</button></td>
         </tr>
         <tr>
-            <td><button onclick="num4()">4</button></td>
-            <td><button onclick="num5()">5</button></td>
-            <td><button onclick="num6()">6</button></td>
-            <td><button onclick="nhan()">X</button></td>
+            <td><button onclick="cong('4')">4</button></td>
+            <td><button onclick="cong('5')">5</button></td>
+            <td><button onclick="cong('6')">6</button></td>
+            <td><button onclick="cong('*')">X</button></td>
         </tr>
         <tr>
-            <td><button onclick="num1()">1</button></td>
-            <td><button onclick="num2()">2</button></td>
-            <td><button onclick="num3()">3</button></td>
-            <td><button onclick="tru()">-</button></td>
+            <td><button onclick="cong('1')">1</button></td>
+            <td><button onclick="cong('2')">2</button></td>
+            <td><button onclick="cong('3')">3</button></td>
+            <td><button onclick="cong('-')">-</button></td>
         </tr>
         <tr>
-            <td><button onclick="num0()">0</button></td>
-            <td><button onclick="cham()">.</button></td>
+            <td><button onclick="cong('0')">0</button></td>
+            <td><button onclick="cong('.')">.</button></td>
             <td><button onclick="bang()">=</button></td>
-            <td><button onclick="cong()">+</button></td>
+            <td><button onclick="cong('+')">+</button></td>
         </tr>
     </table>
+</form>
 </body>
     <script>
+         function cong(value) {
+             document.getElementById('result').value += value;
+         }
+         function bang() {
+            let total= eval(document.getElementById('result').value)
+             document.getElementById('result').value= total
+         }
+         function ac() {
+            document.getElementById('result').value = ""
+         }
     </script>
 </html>
