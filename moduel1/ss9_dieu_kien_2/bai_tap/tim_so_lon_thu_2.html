@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="text" id="so1">
+<input type="text" id="so2">
+<input type="text" id="so3">
+<button onclick="ketqua()">ket qua</button>
 </body>
+<script>
+    function ketqua() {
+        let arg1 = parseInt(document.getElementById('so1').value)
+        let arg2 = parseInt(document.getElementById('so2').value)
+        let arg3 = parseInt(document.getElementById('so3').value)
+        switch ((arg1 > arg2) ? 1 : (arg1 < arg2) ? 2 : 0) {
+            case 0:
+                switch ((arg2 < arg3) ? 1 : (arg2 > arg3) ? 2 : 0) {
+                    case 1:
+
+                }
+                break;
+        }
+    }
+</script>
 </html>

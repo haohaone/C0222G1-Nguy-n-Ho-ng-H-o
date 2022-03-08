@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Do you love me</title>
+    <style>
+        h1 {text-align: center}
+        p {margin-left: 45%}
+    </style>
 </head>
 <body>
-$END$
+    <h1>Do you love me ?</h1>
+    <p>
+        <button onclick="yes()">YES</button>
+        <button onmouseover="no()" id="no" style="position: absolute">NO</button>
+    </p>
+    <h1 id="result"></h1>
 </body>
+    <script>
+        function yes() {
+            document.getElementById('result').innerHTML = 'I love you too'
+            document.getElementById('result').style.color = "red"
+        }
+        function no() {
+            let x = Math.random()*window.innerWidth
+            let y = Math.random()*window.innerHeight
+            document.getElementById('no').style.left = x + 'px';
+            document.getElementById('no').style.top = y + 'px';
+        }
+    </script>
 </html>

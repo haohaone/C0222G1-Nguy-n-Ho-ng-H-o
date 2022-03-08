@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Chi so can nang co the</title>
 </head>
 <body>
-$END$
+    <script>
+        let canNang = prompt('Can Nang')
+        let chieuCao = prompt('Chieu cao');
+        let bmi = canNang / (chieuCao*chieuCao)
+        if (bmi < 18) {
+            alert('Thieu can')
+        } else if (bmi < 25){
+            alert('Binh thuong')
+        } else if (bmi <30){
+            alert('Thua can')
+        } else alert("Beo phi")
+    </script>
 </body>
 </html>

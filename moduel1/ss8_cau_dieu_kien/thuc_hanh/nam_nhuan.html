@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>nam nhan?</title>
 </head>
 <body>
-$END$
+
 </body>
+<script>
+    var a = parseInt(prompt("Nhap so nam"))
+    if ( a%4 === 0){
+        if (a%100===0){
+            if (a%400===0){
+                alert('nam nhuan')
+            } else alert('khong phai nam nhuan')
+        } else alert('Nam nhuan')
+    } alert("Khong phai nam nhuan")
+</script>
 </html>

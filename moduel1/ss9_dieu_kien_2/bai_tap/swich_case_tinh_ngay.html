@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So ngay trong 1 thang</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt('Số ngày của tháng ... là ?'))
+        switch (a) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert("31 ngày");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert('30 ngày');
+                break;
+            default:
+                alert('29 hoặc 28 ngày');
+        }
+    </script>
+</body>
+</html>
