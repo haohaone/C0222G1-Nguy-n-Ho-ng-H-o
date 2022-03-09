@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau truc dieu kien</title>
+</head>
+<style>
+    table {;
+        width: 100%;
+        text-align: left;
+    }
+
+    th {
+        background-color: #dddddd
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <th>Bài 1: Chuyển từ độ C sang độ F</th>
+    </tr>
+    <tr>
+        <td>
+            <input id="doC" type="text" placeholder="&#8451;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua1()">Kết quả</button>&nbsp;
+            <span id="ketqua1"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 2: Chuyển từ mét sang feet</th>
+    </tr>
+    <tr>
+        <td>
+            <input id="met" type="text" placeholder="mét">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua2()">Kết quả</button>&nbsp;
+            <span id="ketqua2"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 3: Tính diện tích hình vuông khi biết cạnh a</th>
+    </tr>
+    <tr>
+        <td>
+            <input id="canha" type="text" placeholder="Độ dài cạnh a">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua3()">Kết quả</button>&nbsp;
+            <span id="ketqua3"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>
+            Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="chiều dài" id="chieuDai"> <input type="text" placeholder="chiều rộng"
+                                                                             id="chieuRong">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua4()">Kết quả</button>&nbsp;<span id="ketqua4"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>
+            Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="cạnh a" id="daitg"> <input type="text" placeholder="cạnh b" id="rongtg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua5()">Kết quả</button>&nbsp;<span id="ketqua5"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>
+            Bài 6: Giải phương trình ax+b=0
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="số A" id="soa1"> <input type="text" placeholder="số B" id="soB1">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua6()">Kết quả</button>&nbsp;<span id="ketqua6"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>
+            Bài 7: Giải phương trình a(x^2)+bx+c=0
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="số A" id="soa2"> <input type="text" placeholder="số B" id="soB2"> <input
+                type="text" placeholder="số C" id="soC2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua7()">Kết quả</button>&nbsp;<span id="ketqua7"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người
+            khi nhỏ 120 và lơn hơn 0
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input id="dotuoi" type="text" placeholder="Nhập tuổi">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua8()">Kết quả</button>
+            <span id="ketqua8"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>
+            Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh
+            của một tam giác là
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="Cạnh A" id="canhtgA"> <input type="text" placeholder="Cạnh B" id="canhtgB">
+            <input type="text" placeholder="Cạnh C" id="canhtgC">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua9()">Kết quả</button>&nbsp;<span id="ketqua9"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 10: Viết chương trình tính giá điện</th>
+    </tr>
+    <tr>
+        <td>
+            <input id="tiendien" type="text" placeholder="Lượng điện tiêu (kWh)">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua10()">Kết quả</button>&nbsp;
+            <span id="ketqua10"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 11: Viết chương trình tính thuế thu nhập cá nhân</th>
+    </tr>
+    <tr>
+        <td>
+            <input id="tncn" type="text" placeholder="Thu nhập cá nhân">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua11()">Kết quả</button>&nbsp;
+            <span id="ketqua11"></span>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="sothang" placeholder="Số tháng gửi tiết kiệm">&nbsp;
+            <input type="text" id="stgtk" placeholder="Số tiền gửi tiết kiệm">&nbsp;
+            <select id="hinhthuc">
+                <option>--Hình thức--</option>
+                <option value="cokh">Có kỳ hạn</option>
+                <option value="kokh">Không kỳ hạn</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Gửi tiết kiệm có kỳ hạn thì lãi suất là 7% và không kỳ hạn có lãi suất 3%</strong></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="ketQua12()">Kết quả</button>&nbsp;
+            <span id="ketqua12"></span>
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+    function ketQua1() {
+        let a = document.getElementById('doC').value;
+        document.getElementById('ketqua1').innerHTML = ((a * 9 / 5) + 32) + '&#8457'
+    }
+
+    function ketQua2() {
+        let a = document.getElementById('met').value;
+        document.getElementById('ketqua2').innerHTML = a * 3.2808 + ' ft'
+    }
+
+    function ketQua3() {
+        let a = document.getElementById('canha').value;
+        document.getElementById('ketqua3').innerHTML = 'Diện tích là ' + a * a
+    }
+
+    function ketQua4() {
+        let a = document.getElementById('chieuDai').value;
+        let b = document.getElementById('chieuRong').value;
+        document.getElementById('ketqua4').innerHTML = 'Diện tích hình chữ nhật là ' + (a * b)
+    }
+
+    function ketQua5() {
+        let a = document.getElementById('daitg').value;
+        let b = document.getElementById('rongtg').value;
+        document.getElementById('ketqua5').innerHTML = 'Diện tích hình tam giác là ' + (a * b) / 2
+    }
+
+    function ketQua6() {
+        let a = document.getElementById('soa1').value;
+        let b = document.getElementById('soB1').value;
+        if (a !== 0) {
+            document.getElementById('ketqua6').innerHTML = 'X = ' + (-b / a)
+        } else document.getElementById('ketqua6').innerHTML = 'impossible equation'
+    }
+
+    function ketQua7() {
+        let a = parseInt(document.getElementById('soa2').value);
+        let b = parseInt(document.getElementById('soB2').value);
+        let c = parseInt(document.getElementById('soC2').value);
+        let delta = Math.pow(b, 2) - (4 * a * c);
+        if (a !== 0) {
+            if (delta === 0) {
+                document.getElementById('ketqua7').innerHTML = 'X = ' + (-b / a * c)
+            } else if (delta > 0) {
+                document.getElementById('ketqua7').innerHTML = 'X = ' + ((-b + Math.sqrt(delta)) / 2 * a) + " và " + 'X = ' + ((-b - Math.sqrt(delta)) / 2 * a)
+            } else document.getElementById('ketqua7').innerHTML = 'impossible equation'
+        } else document.getElementById('ketqua7').innerHTML = 'X = ' + (-c / b)
+    }
+
+    function ketQua8() {
+        let a = parseInt(document.getElementById('dotuoi').value)
+        if (typeof a === "string") {
+            document.getElementById('ketqua8').innerHTML = 'Không phải số tuổi nhập lại'
+        } else if (a < 120 && a > 0) {
+            document.getElementById('ketqua8').innerHTML = 'Tuổi của bạn là ' + a
+        } else document.getElementById('ketqua8').innerHTML = 'Không phải số tuổi nhập lại'
+    }
+
+    function ketQua9() {
+        let a = parseInt(document.getElementById('canhtgA').value);
+        let b = parseInt(document.getElementById('canhtgB').value);
+        let c = parseInt(document.getElementById('canhtgC').value);
+        if (a < 0 || b < 0 || c < 0) {
+            document.getElementById('ketqua9').innerHTML = 'Không phải 3 cạnh của tam giác'
+        } else if ((a + b) > c && (b + c) > a && (a + c) > b) {
+            document.getElementById('ketqua9').innerHTML = 'a, b, c là 3 cạnh của tam giác'
+        } else document.getElementById('ketqua9').innerHTML = 'Không phải 3 cạnh của tam giác'
+    }
+
+    function ketQua10() {
+        let a = parseInt(document.getElementById('tiendien').value)
+        if (a <= 50) {
+            document.getElementById('ketqua10').innerHTML = 'Tiền điện tháng này là ' + (a * 1678 + a * 1678 / 10) + ' VNĐ'
+        } else if (a <= 100) {
+            document.getElementById('ketqua10').innerHTML = 'Tiền điện tháng này là ' + ((50 * 1678 + (a - 50) * 1734) + (50 * 1678 + (a - 50) * 1734) / 10) + ' VNĐ'
+        } else if (a <= 200) {
+            document.getElementById('ketqua10').innerHTML = 'Tiền điện tháng này là ' + ((50 * 1678 + 50 * 1734 + (a - 100) * 2014) + (50 * 1678 + 50 * 1734 + (a - 100) * 2014) / 10) + ' VNĐ'
+        } else if (a <= 300) {
+            document.getElementById('ketqua10').innerHTML = 'Tiền điện tháng này là ' + ((50 * 1678 + 50 * 1734 + 100 * 2014 + (a - 200) * 2536) + (50 * 1678 + 50 * 1734 + 100 * 2014 + (a - 200) * 2536) / 10) + ' VNĐ'
+        } else if (a <= 400) {
+            document.getElementById('ketqua10').innerHTML = 'Tiền điện tháng này là ' + ((50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (a - 300) * 2834) + (50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (a - 300) * 2834) / 10) + ' VNĐ'
+        } else document.getElementById('ketqua10').innerHTML = 'Tiền điện tháng này là ' + ((50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (a - 400) * 2927) + (50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (a - 400) * 2927) / 10) + ' VNĐ'
+    }
+    function ketQua11() {
+        let a = parseInt(document.getElementById('tncn').value);
+        if (a <= 5000000){
+            document.getElementById('ketqua11').innerHTML = 'Thuế TNCN của bạn là' + a*0.05 + ' VNĐ'
+        } else if (a <= 10000000){
+            document.getElementById('ketqua11').innerHTML = 'Thuế TNCN của bạn là' + (a*0.1 - 250000) + ' VNĐ'
+        } else if (a <= 18000000){
+            document.getElementById('ketqua11').innerHTML = 'Thuế TNCN của bạn là' + (a*0.15 - 750000) + ' VNĐ'
+        } else if (a <= 32000000){
+            document.getElementById('ketqua11').innerHTML = 'Thuế TNCN của bạn là' + (a*0.2 - 1650000) + ' VNĐ'
+        } else if (a <= 52000000){
+            document.getElementById('ketqua11').innerHTML = 'Thuế TNCN của bạn là' + (a*0.25 - 3250000) + ' VNĐ'
+        } else  if (a <= 80000000){
+            document.getElementById('ketqua11').innerHTML = 'Thuế TNCN của bạn là' + (a*0.3 - 5850000) + ' VNĐ'
+        } else  document.getElementById('ketqua11').innerHTML = 'Thuế TNCN của bạn là' + (a*0.35 - 9850000) + ' VNĐ'
+    }
+    function ketQua12() {
+        let a = document.getElementById('sothang').value;
+        let b = document.getElementById('stgtk').value;
+        let c = document.getElementById('hinhthuc').value;
+        if (c === 'cokh'){
+            document.getElementById('ketqua12').innerHTML = 'Tiền lãi là ' + b*0.07*a/12 + ' VNĐ'
+        } else document.getElementById('ketqua12').innerHTML = 'Tiền lãi là ' + b*0.03*a/12 + ' VNĐ'
+    }
+</script>
+</html>
