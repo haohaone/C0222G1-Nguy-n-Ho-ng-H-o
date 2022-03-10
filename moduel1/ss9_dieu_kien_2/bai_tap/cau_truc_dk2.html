@@ -271,9 +271,9 @@
         let delta = Math.pow(b, 2) - (4 * a * c);
         if (a !== 0) {
             if (delta === 0) {
-                document.getElementById('ketqua7').innerHTML = 'X = ' + (-b / a * c)
+                document.getElementById('ketqua7').innerHTML = 'X = ' + (-b / (a * c))
             } else if (delta > 0) {
-                document.getElementById('ketqua7').innerHTML = 'X = ' + ((-b + Math.sqrt(delta)) / 2 * a) + " và " + 'X = ' + ((-b - Math.sqrt(delta)) / 2 * a)
+                document.getElementById('ketqua7').innerHTML = 'X = ' + ((-b + Math.sqrt(delta)) /( 2 * a )) + " và " + 'X = ' + ((-b - Math.sqrt(delta)) / (2 * a))
             } else document.getElementById('ketqua7').innerHTML = 'impossible equation'
         } else document.getElementById('ketqua7').innerHTML = 'X = ' + (-c / b)
     }
