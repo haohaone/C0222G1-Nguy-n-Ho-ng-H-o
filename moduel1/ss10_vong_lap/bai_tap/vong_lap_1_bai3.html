@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let a = 0
+    let b = 1
+    let count = 0
+    for (c = 1;;c++) {
+        if (c===1){
+            console.log(c);
+            count++
+        }
+        if (a + b === c) {
+            console.log(c);
+            count++
+            if (count === 20) {
+                break;
+            }
+            a = b
+            b = c
+        }
+    }
+</script>
+</body>
+</html>

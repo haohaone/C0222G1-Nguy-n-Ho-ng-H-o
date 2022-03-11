@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci</title>
+</head>
+<body>
+<script>
+    let a = 0
+    let b = 1
+    let count = 0
+    let d = 0
+        for (c = 1;;c++) {
+            if (a + b === c) {
+                d += c;
+                count++
+                if (count === 20) {
+                    console.log(d)
+                    break;
+                }
+                a = b
+                b = c
+            }
+        }
+</script>
+</body>
+</html>

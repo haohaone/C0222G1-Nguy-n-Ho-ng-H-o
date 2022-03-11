@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 8</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập khoảng số bạn muốn chơi');
+    let b = Math.floor(Math.random()*a);
+    // do {
+    //
+    //     let c = parseInt(prompt('Đoán số đi nào'))
+    // }while (c===b)
+    while (true){
+        let c = parseInt(prompt('Đoán số đi nào'))
+        if (c===b){
+            alert('Chúc mừng');
+            break;
+        }else   if (c>b){
+            alert('Lơn hơn rồi nhỏ lại');
+        } else alert('Bé hơn rồi nhập lại đi')
+    }
+
+</script>
+</body>
+</html>
