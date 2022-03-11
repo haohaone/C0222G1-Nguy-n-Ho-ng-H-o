@@ -8,12 +8,13 @@
 <script>
     let a = prompt('Nhập khoảng số bạn muốn chơi');
     let b = Math.floor(Math.random()*a);
-    // do {
-    //
-    //     let c = parseInt(prompt('Đoán số đi nào'))
-    // }while (c===b)
+    let count = 0;
     while (true){
         let c = parseInt(prompt('Đoán số đi nào'))
+        count++
+        if (count===3){
+            break;
+        }
         if (c===b){
             alert('Chúc mừng');
             break;
@@ -21,7 +22,6 @@
             alert('Lơn hơn rồi nhỏ lại');
         } else alert('Bé hơn rồi nhập lại đi')
     }
-
 </script>
 </body>
 </html>
