@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap 10 so nguyen" id="soNguyen">
+<button onclick="themVao()">Them vao</button>
+<button onclick="ketQua()">Ket qua</button>
+<p id="ketQua"></p>
+<script>
+    let a = []
+    let b = []
+    function themVao() {
+        a.push(document.getElementById('soNguyen').value);
+        document.getElementById('soNguyen').value= ''
+    }
+    function ketQua() {
+        for (let i=0;i<a.length;i++){
+            if (a[i]>10){
+                b.push(a[i])
+            }
+        }
+        document.getElementById('ketQua').innerHTML = b.join('&nbsp')
+    }
+</script>
+</body>
+</html>

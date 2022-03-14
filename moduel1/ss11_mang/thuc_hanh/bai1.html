@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bi1</title>
+</head>
+<body>
+<input type="text" id="giaTri" placeholder="Them gia tri vao mang" >&nbsp;
+<button onclick="Them()">Them</button>&nbsp;
+<button onclick="ketQua()">Ket Qua</button><br>
+<div id="hienThi"></div>
+<script>
+    let a = [];
+    function Them() {
+        a.push(document.getElementById('giaTri').value)
+        document.getElementById('giaTri').value = ''
+    }
+    function ketQua() {
+        let b = ''
+        for (i=0;i<a.length;i++){
+            b += 'Gia tri '+ i + '=' + a[i] + '<br/>'
+        }
+        document.getElementById('hienThi').innerHTML = b
+    }
+</script>
+</body>
+</html>

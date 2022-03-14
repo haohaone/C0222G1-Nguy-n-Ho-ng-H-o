@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let a=[0,1,2,3,4,5,6,7,8,9,10]
+    let b=parseInt(prompt('Nhap so nguyen'))
+    for (let i = 0;i<a.length;i++){
+        if (a[i]===b){
+            a.splice(i,1)
+            a.push(0)
+        }
+    }
+    console.log(a.join(' '))
+</script>
+</body>
+</html>

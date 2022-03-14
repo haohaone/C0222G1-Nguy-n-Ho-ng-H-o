@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animals</title>
+</head>
+<body>
+<script>
+    let animals = [
+        ['dog','cat','duck','chicken','tiger','elephant','pig','cow','hourse','bird'],
+        ['cho','meo','vit','ga','ho','voi','heo','bo','ngua','chim'],
+    ]
+    let flag = false
+    let b = prompt('ten dong vat')
+    for ( let i=0;i<animals[0].length;i++){
+        if (animals[0][i]===b){
+            alert(animals[1][i])
+            flag = true
+        }else if (animals[1][i]===b) {
+            alert(animals[0][i])
+            flag = true
+        }
+    }
+    if (!flag){
+        alert('khong co trong tu dien')
+    }
+</script>
+</body>
+</html>

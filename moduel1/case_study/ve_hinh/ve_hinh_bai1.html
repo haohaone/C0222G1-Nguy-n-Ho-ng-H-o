@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let a = '*'
+    let b = '&nbsp;&nbsp'
+    for (x=1;x<=4;x++) {
+        document.write(a)
+        if (x === 1 || x === 4) {
+            for (y = 1; y <= 3; y++) {
+                document.write(a)
+            }
+        } else {
+            for (y = 1; y <= 3; y++) {
+                document.write(b)
+            }
+        }
+        document.write(a + '<br>')
+    }
+</script>
+</body>
+</html>

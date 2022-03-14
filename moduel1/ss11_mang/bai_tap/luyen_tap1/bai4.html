@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap 10 so nguyen" id="soNguyen">
+<button onclick="themVao()">Them vao</button>
+<button onclick="ketQua()">Ket qua</button>
+<p id="ketQua"></p>
+</body>
+<script>
+    let a = []
+    function themVao() {
+        a.push(document.getElementById('soNguyen').value);
+        console.log(a.length)
+        document.getElementById('soNguyen').value= '';
+    }
+    function ketQua() {
+        // let last = a.length-1
+        // let first = 0
+        // while (first<last){
+        //     console.log(last)
+        //     let b = a[first]
+        //     a[first]=a[last];
+        //     a[last]=b;
+        //     last--;
+        //     first++;
+        // }
+        a.reverse()
+        document.getElementById('ketQua').innerHTML = a.join(' ')
+    }
+</script>
+</html>

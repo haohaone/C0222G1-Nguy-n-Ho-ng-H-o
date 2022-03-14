@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let a = 'The Quick Brown Fox'
+    let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let chuThuong = 'abcdefghijklmnopqrstuvwxyz';
+    let b=[]
+    for (x=0;x<a.length;x++){
+        if (chuHoa.includes(a[x])){
+            b.push(a[x].toLowerCase())
+        }else if (chuThuong.includes(a[x])){
+            b.push(a[x].toUpperCase())
+        } else b.push(a[x])
+    }
+    console.log(b.join(''))
+</script>
+</body>
+</html>

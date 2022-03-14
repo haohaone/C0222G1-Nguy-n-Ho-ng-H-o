@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dao nguoc</title>
+</head>
+<body>
+    <script>
+        let a = [1,2,3,4,5,6,7,8,9,10]
+        let last = a.length -1
+        let firt = 0
+        while (firt<last){
+            let b = a[firt]
+            a[firt]=a[last];
+            a[last]= b;
+            last--
+            firt++
+        }
+        document.write(a)
+    </script>
+</body>
+</html>

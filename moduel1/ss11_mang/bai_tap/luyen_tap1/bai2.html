@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap 10 so nguyen" id="soNguyen">
+<button onclick="themVao()">Them vao</button>
+<button onclick="ketQua()">Ket qua</button>
+<p id="ketQua"></p>
+</body>
+<script>
+    let a = []
+    let b = 0
+    let max = 0
+
+    function themVao() {
+        a.push(parseInt(document.getElementById('soNguyen').value));
+        document.getElementById('soNguyen').value = ''
+    }
+
+    console.log(a)
+
+    function ketQua() {
+        let i;
+        for ( i = 0; i < a.length; i++) {
+            if (max < a[i]) {
+                max = a[i];
+                b = i
+            }
+        }
+        document.getElementById('ketQua').innerHTML = 'So lon nhat la ' + max + ' vi tri so' + b
+    }
+</script>
+</html>

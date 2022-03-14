@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luong nv</title>
+</head>
+<body>
+<input type="text" id="luong" placeholder="Luong nhan vien"><br>
+<button onclick="ketQua()">Ket qua: </button>
+<p id="thueTn"></p>
+<p id="luongRong"></p>
+</body>
+<script>
+    function ketQua() {
+        let a = document.getElementById('luong').value;
+        if (a<=7000000){
+            document.getElementById('thueTn').innerHTML = 'Thue thu nhap cua ban la: ' + a*0.05 +' VND' +'<br>'
+            document.getElementById('luongRong').innerHTML = 'Luong rong cua ban la: ' + (a - a * 0.05) + " VND"
+        } else if (a<=15000000){
+            document.getElementById('thueTn').innerHTML = 'Thue thu nhap cua ban la: ' + a*0.1 +' VND' +'<br>'
+            document.getElementById('luongRong').innerHTML = 'Luong rong cua ban la: ' + (a - a * 0.1) + " VND"
+        } else {
+            document.getElementById('thueTn').innerHTML = 'Thue thu nhap cua ban la: ' + a*0.2 +' VND' +'<br>'
+            document.getElementById('luongRong').innerHTML = 'Luong rong cua ban la: ' + (a - a * 0.2) + " VND"
+        }
+    }
+</script>
+</html>
