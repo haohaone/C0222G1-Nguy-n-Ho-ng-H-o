@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai2</title>
 </head>
 <body>
-$END$
+<script>
+    let a=[]
+    let b=[]
+    let d=[]
+    for (i=0;i<8;i++){
+        a.push(parseInt(prompt('Nhap du lieu cho mang A')))
+    }
+    for (i=0;i<=10;i++){
+        b.push(parseInt(prompt('Nhap du lieu cho mang B')))
+    }
+    for (i=0;i<b.length;i++){
+        let c = 0
+        for (j=0;j<a.length;j++){
+            if (b[i]===a[j]){
+                c++
+                break;
+            }
+        }
+        if (c===0){
+            d.push(b[i])
+        }
+    }
+    console.log(d.join(' '))
+</script>
 </body>
 </html>

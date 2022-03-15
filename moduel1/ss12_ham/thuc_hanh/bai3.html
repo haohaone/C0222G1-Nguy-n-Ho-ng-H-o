@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    function minArray(arr) {
+        let min = arr[0];
+        for (let i=1;i<arr.length;i++){
+            if (min>arr[i]){
+                min=arr[i]
+            }
+        }
+        return min;
+    }
+    let arr2 = [7, 12, 6, 9, 20, 56, 89]
+    let min = minArray(arr2);
+    alert(min)
+</script>
+</body>
+</html>

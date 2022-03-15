@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet Meter</title>
+</head>
+<body>
+<script>
+    function feetToMeter(number) {
+        let meter=0.325*number
+        return meter;
+    }
+    function meterToFeet(number) {
+        let feet=3.279*number
+        return feet;
+    }
+    let a = confirm('1.Bạn muốn đổi sang feet?\n2.Đổi sang meter bấm cancel')
+    if (a===true){
+        b=parseInt(prompt('Meter:'))
+        alert(meterToFeet(b)+' Feet')
+    } else {
+        b=parseInt(prompt('Feet:'))
+        alert(feetToMeter(b)+' Meter')
+    }
+</script>
+</body>
+</html>

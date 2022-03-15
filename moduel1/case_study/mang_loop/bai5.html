@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai5</title>
 </head>
 <body>
-$END$
+<ol>
+    <li>Cafe 10000 VND</li>
+    <li>Cam vat 20000 VND</li>
+    <li>Nuoc ep ca rot 12000 VND</li>
+    <li>Nuoc ep ca chua 14000 VND</li>
+    <li>Nuoc loc 10000 VND</li>
+    <li>Nuoc dua 15000 VND</li>
+    <li>Thoat goi mon</li>
+</ol>
+<button onclick="datHang()">Dat hang</button>
 </body>
+<script>
+    let thucUong=[
+        [1,2,3,4,5,6,7],
+        [10000,20000,12000,14000,10000,15000]
+    ]
+    let c;
+    let d = 0
+    function datHang() {
+        for (i=0;i,thucUong[0].length;i++){
+            let donHang=parseInt(prompt('So thu tu don hang'))
+            if (donHang===7){
+                break;
+            }
+            for (j=0;j<thucUong[0].length;j++){
+                if (thucUong[0][j]===donHang){
+                    c = parseInt(prompt('So luong'))
+                    d+=c*thucUong[1][j]
+                }
+            }
+        }
+        alert('Tong gia tien la '+d+' VND')
+    }
+</script>
 </html>

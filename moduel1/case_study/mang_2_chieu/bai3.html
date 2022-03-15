@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai3</title>
 </head>
 <body>
-$END$
+<script>
+    let a=[
+        [8,6,4,2,9,3,7,1],
+        [15,9,11,16,18,12,13,5,8],
+    ]
+    let b=a[0].sort(function (a, b) {
+        return a-b
+    })
+    let c=a[1].sort(function (a, b) {
+        return a-b
+    })
+
+    if (b[0]<c[0]){
+        console.log('So be nhat trong mang a la '+ b[0])
+    }else console.log('So be nhat trong mang a la '+ c[0])
+    if (b[b.length-1]<c[c.length-1]){
+        console.log('So lon nhat trong mang a la '+ c[c.length-1])
+    }else console.log('So lon nhat trong mang a la '+ b[b.length-1])
+</script>
 </body>
 </html>

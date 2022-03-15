@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai1</title>
 </head>
 <body>
-$END$
+<script>
+    let a = [
+        [],
+        [],
+    ]
+    let c;
+    for (let i=0;i<5;i++){
+        a[0].push(parseInt(prompt('Nhap phan tu cho mang A1')))
+    }
+    for (let i=0;i<5;i++){
+        a[0].push(parseInt(prompt('Nhap phan tu cho mang A2')))
+    }
+    let b=0
+    for (let i=0;i<a.length;i++){
+        for (let j=0;j<a[i].length;j++){
+            b+=a[i][j]
+        }
+    }
+    console.log(a.join(' '))
+    console.log('Tong so nguyen trong mang la '+b)
+</script>
 </body>
 </html>

@@ -6,14 +6,13 @@
 </head>
 <body>
 <script>
-    let a='anh-hao-dep-trai-so-1-the-gioi'
-    let b=''
-    for (let i=0;i<a.length;i++){
+    let a=['a','b','c','d','-','q','-','-','o','-']
+    for (let i = 0; i < a.length; i++) {
         if (a[i]==='-'){
-            b=a.replace(/-/g,'_')
+            a[i]='_'
         }
     }
-    console.log(b)
+    console.log(a.join(' '))
 </script>
 </body>
 </html>

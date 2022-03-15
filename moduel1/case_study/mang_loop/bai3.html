@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bai3</title>
 </head>
 <body>
-$END$
+<script>
+    let a=[]
+    let b=[]
+    let c=1
+    for (i=0;i<5;i++){
+        a.push(parseInt(prompt('Nhap du lieu cho mang A')))
+    }
+    for (i=0;i<5;i++){
+        b.push(parseInt(prompt('Nhap du lieu cho mang B')))
+    }
+    let flag=false
+    let maxA=a[0]
+    let maxB=b[0]
+    for (i=1;i<a.length;i++){
+        if (maxA/maxB<a[i]/b[c]){
+            maxA = a[i]
+            maxB = b[c]
+            flag=true
+        }
+        c++
+    }
+    if (!flag){
+        console.log(a[0]+'/'+b[0]+' vi tri so 1')
+    }else console.log(maxA+'/'+maxB+' vi tri so '+b.indexOf(maxB))
+    console.log(a.join(' '))
+    console.log(b.join(' '))
+</script>
 </body>
 </html>

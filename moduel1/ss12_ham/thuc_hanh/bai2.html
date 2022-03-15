@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi nhiet do</title>
+</head>
+<body>
+<h1>Chuyen doi nhiet do</h1>
+<p>Chuyen doi doi F: <input type="number" id="doF" oninput="doiNhietDo()" onchange="doiNhietDo()"></p>
+<p id="doC"></p>
+</body>
+<script>
+    function doiNhietDo() {
+        let a=document.getElementById('doF').value;
+        let b=(a-32)/1.8
+        document.getElementById('doC').innerHTML = 'Do C la: '+b
+    }
+</script>
+</html>

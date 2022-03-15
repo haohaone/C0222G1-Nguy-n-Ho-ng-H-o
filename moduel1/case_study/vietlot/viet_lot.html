@@ -2,9 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Xo so code gym</title>
+    <style>
+        input {width: 50px}
+    </style>
 </head>
 <body>
-$END$
+<h2>Xổ số code gym</h2>
+<table cellspacing="10px">
+    <tr>
+        <th>Vé số 1: </th>
+        <td><input type="text" id="veSo1o1" name="veso"></td>
+        <td><input type="text" id="veSo1o2" name="veso"></td>
+        <td><input type="text" id="veSo1o3" name="veso"></td>
+        <td><input type="text" id="veSo1o4" name="veso"></td>
+        <td><input type="text" id="veSo1o5" name="veso"></td>
+        <td><input type="text" id="veSo1o6" name="veso"></td>
+    </tr>
+    <tr>
+        <th>Vé số 2: </th>
+        <td><input type="text" id="veSo2o1" name="veso"></td>
+        <td><input type="text" id="veSo2o2" name="veso"></td>
+        <td><input type="text" id="veSo2o3" name="veso"></td>
+        <td><input type="text" id="veSo2o4" name="veso"></td>
+        <td><input type="text" id="veSo2o5" name="veso"></td>
+        <td><input type="text" id="veSo2o6" name="veso"></td>
+    </tr>
+    <tr>
+        <th>Vé số 3: </th>
+        <td><input type="text" id="veSo3o1" name="veso"></td>
+        <td><input type="text" id="veSo3o2" name="veso"></td>
+        <td><input type="text" id="veSo3o3" name="veso"></td>
+        <td><input type="text" id="veSo3o4" name="veso"></td>
+        <td><input type="text" id="veSo3o5" name="veso"></td>
+        <td><input type="text" id="veSo3o6" name="veso"></td>
+    </tr>
+    <tr>
+        <th>Vé số 4: </th>
+        <td><input type="text" id="veSo4o1" name="veso"></td>
+        <td><input type="text" id="veSo4o2" name="veso"></td>
+        <td><input type="text" id="veSo4o3" name="veso"></td>
+        <td><input type="text" id="veSo4o4" name="veso"></td>
+        <td><input type="text" id="veSo4o5" name="veso"></td>
+        <td><input type="text" id="veSo4o6" name="veso"></td>
+    </tr>
+</table>
+<p><button onclick="muaVe()">Mua vé</button></p>
+<p><button onclick="ketQua()">Xem kết quả</button></p>
+<script>
+        let a = parseInt(prompt('1.Bạn muốn tự chọn số '+' '+ '2.Hệ thống random'))
+        let arrveSo = [
+            [],
+            [],
+            [],
+            [],
+        ]
+        let trungThuong=[]
+        let b = 0
+        if (a===2){
+            for (let i=0;i<arrveSo.length;i++){
+                for (let j=0;j<6;j++){
+                    arrveSo[i][j]=document.getElementsByName('veso')[b].value = Math.floor(Math.random()*99)
+                    b++
+                }
+            }
+        }
+        console.log(arrveSo.join(' '))
+        let c = 0;
+        function ketQua() {
+            for (i=0;i<6;i++){
+                trungThuong.push(Math.floor(Math.random()*99))
+            }
+            for (i=0;i<arrveSo.length;i++){
+                for (j=0;i<a[i].length;j++){
+                    if (a[i][j]===b[c]){
+
+                    }
+                }
+            }
+        }
+
+</script>
 </body>
 </html>
