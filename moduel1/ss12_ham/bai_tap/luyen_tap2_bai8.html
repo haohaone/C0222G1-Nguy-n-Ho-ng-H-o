@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<script>
+    function daoNguocMang(array) {
+        let newArray = array.sort(function (a, b) {
+            return b-a
+        })
+        return newArray;
+    }
+    let a = new Array(6)
+    for (i=0;i<6;i++){
+        a[i]=parseInt(prompt('Phan tu cho mang A'))
+    }
+    alert(daoNguocMang(a))
+</script>
+</body>
+</html>

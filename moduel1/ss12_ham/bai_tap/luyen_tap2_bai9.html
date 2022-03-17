@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<script>
+    let a = 'qwefghxcvvbntgyusdd'
+    function kiemTraKiTu(number) {
+        let count=0
+        let flag=false
+        if (isNaN(number)===false){
+            return -1
+        }else {
+            for (i=0;i<a.length;i++){
+                if (a[i]===number){
+                    count++
+                    flag=true
+                }
+            }
+            if (!flag){
+                return 'Khong nam trong mang'
+            }else return 'chu cai '+number+' co nam trong mang va co '+count+' lan xuat hien';
+        }
+    }
+    let b=prompt('nhap ki tu')
+    alert(kiemTraKiTu(b))
+</script>
+</body>
+</html>

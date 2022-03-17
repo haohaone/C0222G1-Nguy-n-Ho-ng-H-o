@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let ngoiSao=[ 'polaris', 'aldebaran', 'deneb', 'vega', 'altair', 'dubhe', 'regulus']
+    let chomSao=['Ursa', 'Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+    function tenChomSao(string) {
+        let flag=false
+        for (i=0;i<ngoiSao.length;i++){
+            if (ngoiSao[i]===string){
+                let tenCs=chomSao[i];
+                flag=true
+                return tenCs;
+            }
+        }
+        if (!flag){
+            return 'Khong thuoc chom sao nao'
+        }
+    }
+    let a = prompt('Ten chom sao viet thuong')
+    alert(tenChomSao(a))
+</script>
+</body>
+</html>

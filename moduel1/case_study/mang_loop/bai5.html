@@ -24,17 +24,13 @@
     let c;
     let d = 0
     function datHang() {
-        for (i=0;i,thucUong[0].length;i++){
+        for (i=0;i<thucUong[0].length;i++){
             let donHang=parseInt(prompt('So thu tu don hang'))
             if (donHang===7){
                 break;
             }
-            for (j=0;j<thucUong[0].length;j++){
-                if (thucUong[0][j]===donHang){
-                    c = parseInt(prompt('So luong'))
-                    d+=c*thucUong[1][j]
-                }
-            }
+            c = parseInt(prompt('So luong'))
+            d+=c*thucUong[1][i]
         }
         alert('Tong gia tien la '+d+' VND')
     }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    function timSoNhoNhat(a,b,c) {
+        let min = a;
+        if (min>b){
+            min=b
+            if (min>c){
+                min=c
+            }
+        }else if (min>c){
+            min = c
+        }
+        return min
+    }
+    let a = parseInt(prompt('a'))
+    let b = parseInt(prompt('b'))
+    let c = parseInt(prompt('c'))
+    alert('So nho nhat la '+timSoNhoNhat(a,b,c))
+
+</script>
+</body>
+</html>
