@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone</title>
+</head>
+<body>
+<script>
+    class Phone {
+        constructor(name, pin, trangThai) {
+            this.name = name
+            this.pin = pin;
+            this.trangthai = trangThai;
+            this.vungChuaTinNhanDangSoan = [];
+            this.thuden = [];
+            this.dagui = [];
+        }
+
+        kiemTraTrangThai(){
+            if (this.trangthai==='Tat'){
+                console.log('Dien thoai '+this.name + ' dang tat');
+            }else console.log('Dien thoai '+this.name + ' dang bat');
+        }
+
+        batTat(){
+            if (this.trangthai==='Tat'){
+                console.log('Dien thoai '+this.name+ ' da duoc bat');
+            }
+        }
+
+        sacPin(){
+            if (this.pin>80){
+                console.log('Pin '+this.name+ ' con nhieu '+this.pin);
+            }else {
+                console.log('Pin '+this.name+' con '+this.pin)
+                console.log('Pin da duoc sac day');
+                this.pin = 100
+            }
+        }
+
+        soanThao(msg){
+            console.log(this.name+' Dang soan tin nhan: '+msg)
+            this.vungChuaTinNhanDangSoan.push(msg)
+            this.pin--
+        }
+
+        guiTinNhan(PhoneObj){
+            console.log(this.name+' Da gui tin nhan den '+PhoneObj.name)
+            PhoneObj.thuden.push(this.vungChuaTinNhanDangSoan)
+            this.pin--
+        }
+
+        nhanTinNhan(phoneObj){
+            console.log(this.name+' Da nhan duoc tin nhan tu '+phoneObj.name)
+            this.thuden.push(phoneObj.vungChuaTinNhanDangSoan)
+            this.pin--
+        }
+
+        hopThuDen(phoneObj){
+            console.log('Tin nhan tu '+phoneObj.name+' la: '+this.thuden)
+            this.pin--
+        }
+
+        pinHienTai(){
+            console.log('Pin hien tai cua '+this.name+' la '+this.pin)
+        }
+
+    }
+    let aiPhone = new Phone('Iphone',50,'Tat')
+    let nokia = new Phone('Nokia',90,'Tat')
+    aiPhone.kiemTraTrangThai()
+    nokia.kiemTraTrangThai()
+    aiPhone.batTat()
+    nokia.batTat()
+    aiPhone.sacPin()
+    nokia.sacPin()
+    aiPhone.soanThao('Dem qua em tuyet voi lam')
+    aiPhone.guiTinNhan(nokia)
+    nokia.nhanTinNhan(aiPhone)
+    nokia.hopThuDen(aiPhone)
+    aiPhone.pinHienTai()
+    nokia.pinHienTai()
+
+</script>
+</body>
+</html>
