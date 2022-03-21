@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim ky tu khac nhau</title>
+</head>
+<body>
+<script>
+    let string = 'abbccawwnnaxzzaaaaaaadacvxvbbbbzzz'
+    let arr = new Array(1)
+    let flag=false
+    for (let i=0;i<string.length;i++){
+        for (let j=0;j<arr.length;j++){
+            if (string[i] !== arr[j]) {
+                flag = true;
+            } else {
+                flag = false;
+                break;
+            }
+        }
+        if (flag===true){
+            arr.push(string[i])
+        }
+    }
+    console.log(arr.join(' '))
+</script>
+</body>
+</html>

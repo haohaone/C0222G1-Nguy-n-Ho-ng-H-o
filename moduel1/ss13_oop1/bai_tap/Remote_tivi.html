@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tivi</title>
+</head>
+<body>
+<script>
+    class tiVi {
+        constructor(name,amLuong,trangThai,kenhTv) {
+            this.name = name;
+            this.amluong = amLuong;
+            this.trangthai = trangThai;
+            this.kenhtv = kenhTv;
+        }
+
+        trangThaiTV(){
+            console.log(this.name+' dang '+this.trangthai)
+        }
+
+        trangThaiAmLuong(){
+            console.log('Am luong hien tai '+this.amluong)
+        }
+
+        kenhHienTai(){
+            console.log('Kenh so '+this.kenhtv)
+        }
+    }
+
+    class Remote {
+        constructor() {
+        }
+
+        batTV(tvObj){
+            console.log('Tivi da duoc bat')
+            tvObj.trangthai='Bat'
+        }
+
+        tatTV(tvObj){
+            console.log('Tivi da duoc tat')
+            tvObj.trangthai='Tat'
+        }
+
+        chuyenKenh(tvObj,number){
+            console.log('Tivi da duoc chuyen kenh')
+            tvObj.kenhtv =  number
+        }
+
+        doiAmLuong(tvObj,number){
+            console.log('Tivi da thay doi am luong')
+            tvObj.amluong += number
+        }
+    }
+
+    let tvSamSung = new tiVi('SamSung',50,'Tat',3)
+    let remote = new Remote()
+    tvSamSung.trangThaiTV()
+    remote.batTV(tvSamSung)
+    tvSamSung.trangThaiTV()
+    tvSamSung.kenhHienTai()
+    remote.chuyenKenh(tvSamSung,9)
+    tvSamSung.kenhHienTai()
+    remote.doiAmLuong(tvSamSung,2)
+    tvSamSung.trangThaiAmLuong()
+    remote.tatTV(tvSamSung)
+    tvSamSung.trangThaiTV()
+</script>
+</body>
+</html>

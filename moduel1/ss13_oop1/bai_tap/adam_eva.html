@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam Eva</title>
+</head>
+<body>
+<script>
+    class Fruit {
+        weight;name;
+        constructor(weight,name) {
+            this.weight=weight;
+            this.name=name;
+        }
+    }
+
+    class Human {
+        constructor(name,weight,gender) {
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
+        }
+
+        checkFruit(fruitObj){
+            if (fruitObj.weight>0){
+                console.log(this.name+': `Qua '+fruitObj.name+' nay an duoc ne`')
+                console.log('Qua '+fruitObj.name+' nay nang '+fruitObj.weight+'g')
+            }else console.log(this.name+': `Qua '+fruitObj.name+' nay hu roi khong an duoc`')
+        }
+
+        eatFruit(fruitObj){
+            console.log(this.name+': an 1 mieng '+fruitObj.name+' nao')
+            console.log('Ngon qua!')
+            fruitObj.weight--
+            this.weight++
+            console.log('Qua '+fruitObj.name+' con '+fruitObj.weight+'g')
+            console.log(this.name+' Weight: '+this.weight)
+        }
+
+        sayIng(msg){
+            console.log(this.name+': `'+msg+'`')
+        }
+    }
+    let apple = new Fruit(10,'Apple');
+    let adam = new Human('Adam',70,'Male');
+    let eva = new Human('Eva',60,'Female');
+    adam.checkFruit(apple);
+    eva.sayIng('Anh an thu di');
+    adam.eatFruit(apple);
+    adam.sayIng('Em cung an di');
+    eva.eatFruit(apple)
+</script>
+</body>
+</html>

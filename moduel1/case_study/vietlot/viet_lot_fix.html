@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viet lot</title>
+</head>
+<body>
+<h2>Xổ số code gym</h2>
+<p>
+    <button onclick="muaVe()">Mua vé</button>
+</p>
+<p>
+    <button onclick="ketQua()">Xem kết quả</button>
+</p>
+<div id="hienThi"></div>
+</body>
+<script>
+
+    function muaVe() {
+        let a = prompt('Số lượng muốn mua')
+        if (a > 4) {
+            alert('Chỉ mua được 4 vé')
+        } else {
+            let b = confirm('Bạn có muốn random vé số?')
+            if (b === true) {
+                let c = '<table cellspacing="10px">'
+                for (let i = 0; i < a; i++) {
+                    c += '<tr>'+'<th>Vé số '+(i+1)+': '+'</th>'
+                    for (let j = 0; j < 6; j++) {
+                        let randomNum = Math.floor(Math.random()*99)
+                        c += '<td><input type="text" style="width: 50px" id="'+i+''+j+'" value="'+randomNum+'"></td>'
+                    }
+                    c += '</tr>'
+                }
+                document.getElementById('hienThi').innerHTML = c
+            }
+        }
+    }
+    function ketQua() {
+        let veTrungGiai = [];
+        for (let i = 0;i<6;i++){
+            let randomNum = Math.floor(Math.random()*99)
+            veTrungGiai.push(randomNum)
+        }
+        alert('Vé trung giải là: '+veTrungGiai.join(' '))
+        let count=0;
+        let i =0;
+        let j=0;
+        let a = String()
+        alert(a)
+        // for (let i=0;i<veTrungGiai.length;i++){
+        //     for (let j=0;j<6;j++){
+        //         let a = String(i+j)
+        //         if (veTrungGiai[i]===document.getElementById(a).value){
+        //             count++
+        //         }
+        //     }
+        //     if (count<3){
+        //         alert('Ve số '+(i+1)+': Không trúng giải')
+        //     }else if (count<5){
+        //         alert('Ve số '+(i+1)+': Trúng giải khuyến khích')
+        //     }else if (count===5){
+        //         alert('Ve số '+(i+1)+': Trúng giải nhì')
+        //     }else {
+        //         alert('Ve số '+(i+1)+': Trúng giải nhì')
+        //     }
+        // }
+    }
+</script>
+</html>

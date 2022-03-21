@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim ki tu chung</title>
+</head>
+<body>
+<script>
+    let arr1= 'aabcckoookkb'
+    let arr2 = 'kadcaaokkb'
+    let checkArr = new Array(1)
+    for (let i = 0; i<arr1.length;i++){
+        for (let j = 0;j<arr2.length;j++){
+            if (arr1[i]===arr2[j]){
+                checkArr.push(arr1[i])
+                arr2 = arr2.replace(arr2[j],'')
+                break;
+            }
+        }
+
+    }
+    console.log(checkArr.join(' '));
+    let  flag=false;
+
+    let soLuong =new Array(1)
+    for (let i = 0;i<checkArr.length;i++){
+        let count = 0;
+        for (let j=1;j<checkArr.length;j++){
+            if (checkArr[i]===checkArr[j]){
+                count++;
+            }
+        }
+        for (let x =0;x<soLuong.length;x++){
+            if (checkArr[i]!==soLuong[x]){
+                flag=true;
+            }else {
+                flag=false;
+                break;
+            }
+        }
+        if (flag===true){
+            soLuong.push(checkArr[i])
+            console.log('ki tu '+checkArr[i]+' co '+count+' ki tu')
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Den</title>
+</head>
+<body>
+<script>
+    class BongDen {
+        constructor(name,pin,trangThai) {
+            this.name = name;
+            this.pin = pin;
+            this.trangthai = trangThai;
+        }
+
+        trangThaiBongDen(){
+            if (this.pin===0){
+                console.log('Pin da het khong the dung duoc nua')
+            }else console.log(this.trangthai+' con '+this.pin+' pin')
+        }
+    }
+
+    class CongTat{
+        constructor() {
+        }
+
+        bat(lampObj){
+            console.log(lampObj.name+' da duoc bat')
+            lampObj.trangthai='Dang phat sang'
+            lampObj.pin--
+        }
+
+        tat(lamObj){
+            console.log(lamObj.name+' da duoc tat')
+            lamObj.trangthai=' Dang tat'
+        }
+    }
+
+    let denFlash = new BongDen('den Flash',10,'Dang tat')
+    let congTat = new CongTat()
+    for (let i=0;i<10;i++){
+        congTat.bat(denFlash);
+        denFlash.trangThaiBongDen();
+        congTat.tat(denFlash);
+        denFlash.trangThaiBongDen();
+    }
+</script>
+</body>
+</html>
