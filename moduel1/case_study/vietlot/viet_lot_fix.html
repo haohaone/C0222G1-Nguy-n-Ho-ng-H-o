@@ -3,6 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Viet lot</title>
+    <style>
+        table,h2 {
+            margin-left: 45%;
+        }
+        table {
+            margin-left: 30%;
+        }
+        input {
+            width: 100px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            text-align: center;
+        }
+
+        button {
+            width: 100px;
+            border-radius: 10px;
+            margin-left: 47%;
+            margin-bottom: 2%;
+            text-align: center;
+        }
+        div {
+            margin-left: 45%;
+        }
+    </style>
 </head>
 <body>
 <h2>Xổ số code gym</h2>
@@ -12,7 +38,8 @@
 <p>
     <button onclick="ketQua()">Xem kết quả</button>
 </p>
-<div id="hienThi"></div>
+<p id="hienThi"></p>
+<div id="ketQua"></div>
 </body>
 <script>
 
@@ -25,10 +52,21 @@
             if (b === true) {
                 let c = '<table cellspacing="10px">'
                 for (let i = 0; i < a; i++) {
-                    c += '<tr>'+'<th>Vé số '+(i+1)+': '+'</th>'
+                    c += '<tr>' + '<th>Vé số ' + (i + 1) + ': ' + '</th>'
                     for (let j = 0; j < 6; j++) {
-                        let randomNum = Math.floor(Math.random()*99)
-                        c += '<td><input type="text" style="width: 50px" id="'+i+''+j+'" value="'+randomNum+'"></td>'
+                        let randomNum = Math.floor(Math.random() * 99)
+                        c += '<td><input type="text" style="width: 50px" id="' + i + '' + j + '" value="' + randomNum + '"></td>'
+                    }
+                    c += '</tr>'
+                }
+                c+='</table>'
+                document.getElementById('hienThi').innerHTML = c
+            } else {
+                let c = '<table cellspacing="10px">'
+                for (let i = 0; i < a; i++) {
+                    c += '<tr>' + '<th>Vé số ' + (i + 1) + ': ' + '</th>'
+                    for (let j = 0; j < 6; j++) {
+                        c += '<td><input type="text" style="width: 50px" id="' + i + '' + j + '"></td>'
                     }
                     c += '</tr>'
                 }
@@ -37,34 +75,35 @@
         }
     }
     function ketQua() {
+        let abc = ''
         let veTrungGiai = [];
-        for (let i = 0;i<6;i++){
-            let randomNum = Math.floor(Math.random()*99)
+        for (let i = 0; i < 6; i++) {
+            let randomNum = Math.floor(Math.random() * 99)
             veTrungGiai.push(randomNum)
         }
-        alert('Vé trung giải là: '+veTrungGiai.join(' '))
-        let count=0;
-        let i =0;
-        let j=0;
-        let a = String()
-        alert(a)
-        // for (let i=0;i<veTrungGiai.length;i++){
-        //     for (let j=0;j<6;j++){
-        //         let a = String(i+j)
-        //         if (veTrungGiai[i]===document.getElementById(a).value){
-        //             count++
-        //         }
-        //     }
-        //     if (count<3){
-        //         alert('Ve số '+(i+1)+': Không trúng giải')
-        //     }else if (count<5){
-        //         alert('Ve số '+(i+1)+': Trúng giải khuyến khích')
-        //     }else if (count===5){
-        //         alert('Ve số '+(i+1)+': Trúng giải nhì')
-        //     }else {
-        //         alert('Ve số '+(i+1)+': Trúng giải nhì')
-        //     }
-        // }
+        alert('Vé trung giải là: ' + veTrungGiai.join(' '))
+        for (let i = 0; i < veTrungGiai.length; i++) {
+            let count = 0;
+            for (let j = 0; j < 6; j++) {
+                let a = i + '' + j
+                if (parseInt(document.getElementById(a).value) === veTrungGiai[j]) {
+                    count++
+                    document.getElementById(a).style.backgroundColor = '#CCFDFF'
+                }
+            }
+            if (count < 3) {
+
+                abc+= '<strong>Vé số ' + (i + 1) + ': Không trúng giải</strong><br><br>'
+            } else if (count < 5) {
+                abc+= '<strong>Vé số ' + (i + 1) + ': Trúng giải khuyến khích</strong><br><br>'
+            } else if (count === 5) {
+                abc+= '<strong>Vé số ' + (i + 1) + ': Trúng giải nhì</strong><br><br>'
+            } else {
+                abc+= '<strong>Vé số ' + (i + 1) + ': Trúng giải nhất</strong><br><br>'
+            }
+            document.getElementById('ketQua').innerHTML = abc
+        }
+
     }
 </script>
 </html>
