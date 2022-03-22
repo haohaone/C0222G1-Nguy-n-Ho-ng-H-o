@@ -17,13 +17,15 @@
     }
     let maxA = a[0];
     let maxB = b[0];
+    let index = 0;
     for (let i = 1; i < a.length; i++) {
         if (maxA / maxB < a[i] / b[c]) {
             maxA = a[i]
             maxB = b[i]
-        } 
+            index = i
+        }
     }
-    console.log(maxA + '/' + maxB + ' vi tri so ' + a.indexOf(maxA))
+    console.log(maxA + '/' + maxB + ' vi tri so ' + index)
     console.log(a.join(' '));
     console.log(b.join(' '));
 </script>

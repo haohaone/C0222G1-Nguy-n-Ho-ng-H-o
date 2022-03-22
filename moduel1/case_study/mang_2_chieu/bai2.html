@@ -6,26 +6,31 @@
 </head>
 <body>
 <script>
-    let a=[
-        [1,'b',3,'a',2,'c',8,9,'t',4,'z'],
-        [7,'n',1,'o',4,'v','i','c','q','y']
-    ]
+    function tongSoNt(array) {
 
-    let soLuongSoNt=0
-    for (let i=0;i<a.length;i++){
-        for (let j=0;j<a[i].length;j++){
-            let count=0
-            for(let x=1;x<a[i][j];x++){
-                if (a[i][j]%x===0){
-                    count++
+        let soLuongSoNt = 0
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                let count = 0
+                for (let x = 1; x <= array[i][j]; x++) {
+                    if (array[i][j] % x === 0) {
+                        count++
+                    }
+                }
+                if (count === 2) {
+                    soLuongSoNt++
+                    console.log(array[i][j])
                 }
             }
-            if (count===2){
-                soLuongSoNt++
-            }
         }
+        return 'So luong so nguyen to la ' + soLuongSoNt
     }
-    console.log('Tong so nguyen trong mang la '+soLuongSoNt)
+
+    let a = [
+        [2, 5, 7, 9, 8, 6, 17, 11],
+        [7,9,11,15,16,19,20,22]
+    ]
+    alert(tongSoNt(a))
 </script>
 </body>
 </html>

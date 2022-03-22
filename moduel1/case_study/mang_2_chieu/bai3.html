@@ -6,23 +6,30 @@
 </head>
 <body>
 <script>
-    let a=[
-        [8,6,4,2,9,3,7,1],
-        [15,9,11,16,18,12,13,5,8],
+   function timSoMinMax(array){
+       for (let i=0;i<array.length;i++){
+           array[i].sort(function (a,b) {
+                return a - b
+           })
+       }
+       let min = array[0][0]
+       let max = array[0][array[0].length-1]
+       for (let i=1;i<array.length;i++){
+           if (min > array[i][0]){
+               min = array[i][0]
+           }
+           if (max<array[i][array[i].length-1]){
+               max = array[i][array[i].length-1]
+           }
+       }
+       return 'So nho nhat la '+min+' So lon nhat la '+max
+   }
+    let array=[
+        [1,2,3,4,5,6,7,8,9],
+        [10,11,12,13,14,15,16],
+        [9,3,6,5,4,25,7,9]
     ]
-    let b=a[0].sort(function (a, b) {
-        return a-b
-    })
-    let c=a[1].sort(function (a, b) {
-        return a-b
-    })
-
-    if (b[0]<c[0]){
-        console.log('So be nhat trong mang a la '+ b[0])
-    }else console.log('So be nhat trong mang a la '+ c[0])
-    if (b[b.length-1]<c[c.length-1]){
-        console.log('So lon nhat trong mang a la '+ c[c.length-1])
-    }else console.log('So lon nhat trong mang a la '+ b[b.length-1])
+    alert(timSoMinMax(array))
 </script>
 </body>
 </html>
