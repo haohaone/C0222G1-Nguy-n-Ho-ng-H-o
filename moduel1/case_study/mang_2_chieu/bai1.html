@@ -6,27 +6,34 @@
 </head>
 <body>
 <script>
-    function tongSoChan(m,n) {
-        let a = [
-            [],
-        ]
-        for (let i = 0; i < m; i++) {
-            for (let j = 0; j < n; j++) {
-                a[i].push(parseInt(prompt('Nhap phan tu cho mang m'+i)))
+    function solution(matrix) {
+        let money=0;
+        for(let i=matrix.length-1;i>=0;i--){
+            for(let a=0;a<matrix[0].length;a++){
+               if (matrix[i][a]===0){
+                   break;
+               }else {
+                   let count = 0;
+                   for(let j=0;j<matrix.length;j++){
+                       if(matrix[j][a]===0){
+                           count++
+                           break;
+                       }
+                   }
+                   if(count===0){
+                       money += matrix[i][a]
+                   }
+               }
             }
-            a.push([])
         }
-        let b = 0
-        for (let i = 0; i < a.length; i++) {
-            for (let j = 0; j < a[i].length; j++) {
-                if (a[i][j] % 2 === 0) {
-                    b += a[i][j]
-                }
-            }
-        }
-        return 'Tong so chan trong mang la '+b
+        return money
     }
-    alert(tongSoChan(parseInt(prompt('m')),parseInt(prompt('n'))))
+    let arr = [
+        [0,1,1,2],
+        [0,5,0,0],
+        [2,0,3,3]
+    ]
+    console.log(solution(arr))
 </script>
 </body>
 </html>
